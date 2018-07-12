@@ -1,0 +1,194 @@
+snippet desc
+/*
+* =====================================================================================
+*
+*       Filename:  `!p snip.rv = fn`
+*
+*    Description:  ${1}
+*
+*        Version:  1.0
+*        Created:  `!v strftime("%Y-%m-%d")`
+*
+*         Author:  Emin Aliyev 
+*
+* =====================================================================================
+*/
+endsnippet
+
+snippet cls
+/*
+* =====================================================================================
+*
+*       Filename:  `!p snip.rv = fn`
+*
+*    Description:  ${1}
+*
+*        Version:  1.0
+*        Created:  `!v strftime("%Y-%m-%d")`
+*
+*         Author:  Emin Aliyev 
+*
+* =====================================================================================
+*/
+
+${2:class} ${3:ClassName}
+{
+    ${4://Comment}
+    public function ${5:__construct}(${6://args})
+    {
+        ${7:parent::__construct(${8://args})};
+    }
+}
+endsnippet
+
+snippet cle
+/*
+* =====================================================================================
+*
+*       Filename:  `!p snip.rv = fn`
+*
+*    Description:  ${1}
+*
+*        Version:  1.0
+*        Created:  `!v strftime("%Y-%m-%d")`
+*
+*         Author:  Emin Aliyev 
+*
+* =====================================================================================
+*/
+
+class ${2:ClassName} extends ${3:AnotherClass}
+{
+    ${4://Comment}
+    public function ${5:__construct}(${6://args})
+    {
+        ${7:parent::__construct(${8://args})};
+    }
+}
+endsnippet
+
+
+######################
+## Class Properties ##
+######################
+
+snippet pub
+public $$1 = $2;
+endsnippet
+
+snippet pro
+protected $$1 = $2;
+endsnippet
+
+snippet pri
+private $$1 = $2;
+endsnippet
+
+
+
+###################
+## Class Methods ##
+###################
+
+snippet pf
+public function ${1:__construct}(${2://args})
+{
+    ${3:parent::__construct(${4://args})};$5
+}
+endsnippet
+
+snippet prf
+private function $1($2)
+{
+    $3;$4
+}
+endsnippet
+
+snippet gf
+public function get$1(${2://args})
+{
+    $3;
+    
+    return $5;
+}
+endsnippet
+
+snippet sf
+public function set$1(${2://key}, ${3://value})
+{
+    $4;
+    
+    return $this;
+}
+endsnippet
+
+
+#############
+## GENERAL ##
+#############
+
+snippet pr
+print_r($1);
+endsnippet
+
+snippet vd
+var_dump($1);
+endsnippet
+
+snippet deb
+echo "<pre>";
+print_r($1);
+echo "</pre>";
+die();
+endsnippet
+
+snippet fun
+function($1){
+    $2;
+}
+endsnippet
+
+snippet $th
+$this->$1
+endsnippet
+
+snippet fe
+foreach($${1:variable} as $${2:value}){
+    ${3:// code...}
+}
+endsnippet
+
+snippet fek
+foreach($${1:variable} as $${2:key} => $${3:value}){
+    ${4:// code...}
+}
+endsnippet
+
+snippet for
+for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
+    ${4:// code...}
+}
+endsnippet
+
+
+
+
+#############
+## Laravel ##
+#############
+
+snippet {{
+{{ $1 }}
+endsnippet
+
+snippet rg
+Route::get('$1','$2');
+endsnippet
+
+snippet rp
+Route::post('$1','$2');
+endsnippet
+
+snippet rr
+Route::resourse('$1','$2');
+endsnippet
